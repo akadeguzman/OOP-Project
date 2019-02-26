@@ -1,0 +1,24 @@
+﻿<Window x:Class="OOP_Project_Updated.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OOP_Project_Updated"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="436.975">
+    <Grid>
+        <Rectangle Fill="#FFED1B2D" HorizontalAlignment="Left" Height="29" Stroke="Black" VerticalAlignment="Top" Width="429" Margin="0,152,0,0"/>
+        <Rectangle Fill="#FF006B41" HorizontalAlignment="Left" Height="95" Margin="0,41,0,0" Stroke="Black" VerticalAlignment="Top" Width="429"/>
+        <Rectangle Fill="#FFF5821F" HorizontalAlignment="Left" Height="28" Stroke="Black" VerticalAlignment="Top" Width="429"/>
+
+        <Button Content="Loan" HorizontalAlignment="Left" Margin="227,33,0,0" VerticalAlignment="Top" Width="171" Height="46" Click="Button_Click"/>
+        <Button Content="Inventory" HorizontalAlignment="Left" Margin="227,101,0,0" VerticalAlignment="Top" Width="171" Height="46" Click="Button_Click_1"/>
+        
+
+        <Image Source="Images/21145973320_6a2ee460ca_b.jpg"  HorizontalAlignment="Left" Height="150" Margin="36,10,0,0" VerticalAlignment="Top" Width="174">
+            <Image.Effect>
+                <DropShadowEffect ShadowDepth="7" Opacity="0.985" BlurRadius="27"/>
+            </Image.Effect>
+        </Image>
+    </Grid>
+</Window>
