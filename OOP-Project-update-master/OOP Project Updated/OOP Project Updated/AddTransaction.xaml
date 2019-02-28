@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:OOP_Project_Updated"
         mc:Ignorable="d"
         Title="AddTransaction" Height="450" Width="800"
-        WindowStartupLocation="CenterScreen" Activated="Window_Activated">
+        WindowStartupLocation="CenterScreen">
 
     <Grid>
         <Rectangle Fill="#FFED1B2D" HorizontalAlignment="Left" Height="66" Stroke="Black" VerticalAlignment="Top" Width="792" Margin="0,353,0,0"/>
@@ -17,11 +17,11 @@
         <Rectangle Fill="White" HorizontalAlignment="Left" Height="399" Margin="28,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="290"/>
 
         <!--Text Box-->
-        <Button  Content="Add Transaction" Click="Button_Click" HorizontalAlignment="Left" Margin="126,366,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button  Content="Add Transaction" Click="Button_Click" HorizontalAlignment="Left" Margin="106,366,0,0" VerticalAlignment="Top" Width="139"/>
 
         <!--Transaction-->
 
-        <ComboBox Name="cmbJewelry" HorizontalAlignment="Left" Margin="145,128,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cmbJewelry_SelectionChanged">
+        <ComboBox Name="cmbJewelry" HorizontalAlignment="Left" Margin="145,128,0,0" VerticalAlignment="Top" Width="120">
                 
         </ComboBox>
 

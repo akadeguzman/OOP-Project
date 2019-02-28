@@ -12,7 +12,7 @@ namespace OOP_Project
         public string FirstName;
         public string MiddleInitial;
         public string LastName;
-        public string Birthdate;
+        public string ContactNumber;
         public string Address;
 
         public Person(string firstName, string middleInitial, string lastName)

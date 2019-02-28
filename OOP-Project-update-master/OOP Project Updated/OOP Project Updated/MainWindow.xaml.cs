@@ -21,14 +21,12 @@ namespace OOP_Project_Updated
     /// </summary>
     public partial class MainWindow : Window
     {
-        public List<string> names = new List<string>();
-        public DataStorage data = new DataStorage();
+        
         public Product Jewelry = new Product();
 
         public MainWindow()
         {
             InitializeComponent();
-            names = null;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -36,7 +34,6 @@ namespace OOP_Project_Updated
             this.Hide();
 
             AddTransaction AddTransac = new AddTransaction();
-            AddTransac.data = data;
 
             AddTransac.Show();
 
@@ -51,10 +48,5 @@ namespace OOP_Project_Updated
             jewelry.Show();
         }
     }
-    public class DataStorage
-    {
-        public List<Person> customers = new List<Person>();
-        public List<Person> jewelries = new List<Person>();
-
-    }
+   
 }

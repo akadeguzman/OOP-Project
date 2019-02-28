@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using OOP_Project;
+using System.IO;
 
 namespace OOP_Project_Updated
 {
@@ -25,11 +26,11 @@ namespace OOP_Project_Updated
         public MainWindow main;
         public Person Customer;
         public Product product;
+        public string CustomerFullName;
 
         List<string> JewelryType = new List<string> { "Bracelet", "Necklace", "Earrings", "Ring" };
         List<string> Condition = new List<string> { "Scratched", "Broken Locks", "Missing Stones", "Dented" };
         List<string> Quality = new List<string> { "10k", "18k", "21k" };
-        public DataStorage data;
 
         public AddTransaction()
         {
@@ -65,29 +66,5 @@ namespace OOP_Project_Updated
             addCustomer.Show();
         }
 
-        private void cmbJewelry_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            //switch (cmbJewelry.SelectedItem.ToString())
-            //{
-            //    case "Bracelet":
-            //        txtPrice.Text = Convert.ToString(5000);
-            //        break;
-            //    case "Earrings":
-            //        txtPrice.Text = Convert.ToString(2000);
-            //        break;
-            //    case "Ring":
-            //        txtPrice.Text = Convert.ToString(3000);
-            //        break;
-            //    case "Necklace":
-            //        txtPrice.Text = Convert.ToString(4000);
-            //        break;
-            //}
-        }
-
-        private void Window_Activated(object sender, EventArgs e)
-        {
-            foreach (Person customer in data.customers)
-                cmbCustomer.Items.Add(customer.GetFullName());
-        }
     }
 }

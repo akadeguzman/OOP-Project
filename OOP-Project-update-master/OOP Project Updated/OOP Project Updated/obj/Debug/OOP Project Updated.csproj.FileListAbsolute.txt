@@ -61,3 +61,9 @@ C:\Users\Adrian\Documents\GitHub\OOP-Project\OOP-Project-update-master\OOP Proje
 C:\Users\Adrian\Documents\GitHub\OOP-Project\OOP-Project-update-master\OOP Project Updated\OOP Project Updated\obj\Debug\OOP Project Updated.csproj.CoreCompileInputs.cache
 C:\Users\Adrian\Documents\GitHub\OOP-Project\OOP-Project-update-master\OOP Project Updated\OOP Project Updated\obj\Debug\OOP Project Updated.exe
 C:\Users\Adrian\Documents\GitHub\OOP-Project\OOP-Project-update-master\OOP Project Updated\OOP Project Updated\obj\Debug\OOP Project Updated.pdb
+C:\Users\Adrian\Documents\GitHub\OOP-Project\OOP-Project-update-master\OOP Project Updated\OOP Project Updated\bin\Debug\MaterialDesignColors.dll
+C:\Users\Adrian\Documents\GitHub\OOP-Project\OOP-Project-update-master\OOP Project Updated\OOP Project Updated\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Adrian\Documents\GitHub\OOP-Project\OOP-Project-update-master\OOP Project Updated\OOP Project Updated\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Adrian\Documents\GitHub\OOP-Project\OOP-Project-update-master\OOP Project Updated\OOP Project Updated\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Adrian\Documents\GitHub\OOP-Project\OOP-Project-update-master\OOP Project Updated\OOP Project Updated\obj\Debug\App.baml
+C:\Users\Adrian\Documents\GitHub\OOP-Project\OOP-Project-update-master\OOP Project Updated\OOP Project Updated\obj\Debug\OOP Project Updated.csproj.CopyComplete
