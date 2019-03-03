@@ -1,12 +1,10 @@
 ﻿<Window x:Class="OOP_Project_Updated.MainWindow"
         
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        
         TextElement.FontWeight="Regular"
         TextOptions.TextFormattingMode="Ideal"
         TextOptions.TextRenderingMode="Grayscale"
-        Background="{DynamicResource MaterialDesignPaper}"
-        FontFamily="{DynamicResource MaterialDesignFont}"
 
 
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -19,7 +17,7 @@
     <Grid>
         <Rectangle Fill="#FFED1B2D" HorizontalAlignment="Left" Height="29" Stroke="Black" VerticalAlignment="Top" Width="429" Margin="0,152,0,0"/>
         <Rectangle Fill="#FF006B41" HorizontalAlignment="Left" Height="95" Margin="0,41,0,0" Stroke="Black" VerticalAlignment="Top" Width="429"/>
-        <Rectangle Fill="#FFF5821F" HorizontalAlignment="Left" Height="28" Stroke="Black" VerticalAlignment="Top" Width="429"/>
+        <Rectangle Fill="#FFF5821F" Height="28" Stroke="Black" Width="429" Margin="0,0,0,391"/>
 
         <Button Content="Loan" HorizontalAlignment="Left" Margin="227,33,0,0" VerticalAlignment="Top" Width="171" Height="46" Click="Button_Click"/>
         <Button Content="Inventory" HorizontalAlignment="Left" Margin="227,101,0,0" VerticalAlignment="Top" Width="171" Height="46" Click="Button_Click_1"/>

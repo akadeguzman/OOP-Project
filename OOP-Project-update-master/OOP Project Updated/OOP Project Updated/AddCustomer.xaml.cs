@@ -24,7 +24,11 @@ namespace OOP_Project_Updated
         
         public MainWindow main;
         public string CustomerFullName;
+        public string CustomerContactNumber;
         public Person Customer;
+        public Button Button;
+
+
         public AddCustomer()
         {
             InitializeComponent();
@@ -33,49 +37,59 @@ namespace OOP_Project_Updated
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
-
+               
             string filePath = @"C:\Users\Adrian\Documents\GitHub\OOP-Project\OOP-Project-update-master\OOP Project Updated\OOP Project Updated\TextFiles\Customers.txt";
+            string CustName = @"C:\Users\Adrian\Documents\GitHub\OOP-Project\OOP-Project-update-master\OOP Project Updated\OOP Project Updated\TextFiles\CustomerName.txt";
 
-            List<string> customer = File.ReadAllLines(filePath).ToList();
-            AddTransaction Add = new AddTransaction();
+            if (CustomerContactNumber != " ")
+            {
+                AddTransaction Add = new AddTransaction();
 
             Add.Customer = new Person(this.txtFirstName.Text, this.txtMiddleInitial.Text, this.txtLastName.Text);
             CustomerFullName = Add.Customer.GetFullName();
-            Add.Customer.Address = txtAddress.Text;
-            Add.Customer.ContactNumber = txtContactNumber.Text;
-                        
-            customer.Add(CustomerFullName);
-            customer.Add(Add.Customer.Address);
-            customer.Add(Add.Customer.ContactNumber);
-
-            File.WriteAllLines(filePath, customer);
-
-                   
+            Add.Customer.GetAddress = txtAddress.Text;
+            Add.Customer.GetMobileNumber = txtContactNumber.Text;
+            CustomerContactNumber = Add.Customer.GetMobileNumber;
+            
             //---------------------------------------------------
 
-            List<string> output = new List<string>();
+            List<string> output = File.ReadAllLines(filePath).ToList(); 
+            List<string> customer = new List<string>();
+            customer.Add(CustomerFullName);
+            customer.Add(Add.Customer.GetAddress);
+            customer.Add(CustomerContactNumber);
 
-            foreach (var info in customer)
-            {
-                output.Add($"{CustomerFullName},{Add.Customer.Address},{Add.Customer.ContactNumber}");
-            }
-
+            output.Add($"{CustomerFullName},{Add.Customer.GetAddress},{CustomerContactNumber}");
+            
             File.WriteAllLines(filePath, output);
 
             //---------------------------------------------------
 
-            List<string> lines = File.ReadAllLines(filePath).ToList();
+            List<string> list = File.ReadAllLines(CustName).ToList();
 
-            foreach (var line in lines)
+
+            list.Add(CustomerFullName);
+
+            foreach (string items in list)
             {
-                string[] entries = line.Split(',');
-
-                CustomerFullName = entries[0];
+                Add.cmbCustomer.Items.Add(items);
             }
-            Add.cmbCustomer.Items.Add(CustomerFullName);
+            File.WriteAllLines(CustName, list);
 
-            Add.Show();
+            //----------------------------------------------------
+
+                this.Close();
+                Add.Show();
+            }
+            else
+            {
+                MessageBox.Show("Incorrect Mobile Number. Please Try Again", "Incorrect Details", MessageBoxButton.OK, MessageBoxImage.Error, MessageBoxResult.OK);
+            }
+        }
+
+        private void BtnSave_Click(object sender, RoutedEventArgs e)
+        {
+            SnackbarThree.MessageQueue.Enqueue("Customer Added Successfully");
         }
     }
 }

@@ -90,10 +90,8 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Classes\Calculations.cs" />
-    <Compile Include="Classes\Informations.cs" />
     <Compile Include="Classes\Person.cs" />
     <Compile Include="Classes\Product.cs" />
-    <Compile Include="Classes\SavedFiles.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -131,6 +129,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="TextFiles\Customers.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="TextFiles\CustomerName.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

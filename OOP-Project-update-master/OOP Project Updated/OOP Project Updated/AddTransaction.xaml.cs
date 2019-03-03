@@ -45,13 +45,12 @@ namespace OOP_Project_Updated
                 cmbQuality.Items.Add(quality);
 
 
-            cmbJewelry.SelectedItem = "choose";
-
+            cmbJewelry.SelectedItem = "choose";            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow transaction = new MainWindow();
+            MainWindow loanTransaction = new MainWindow();
 
             this.Hide();
 
@@ -62,9 +61,11 @@ namespace OOP_Project_Updated
             this.Close();
 
             AddCustomer addCustomer = new AddCustomer();
-
+            
             addCustomer.Show();
         }
+
+
 
     }
 }

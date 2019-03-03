@@ -8,14 +8,22 @@ namespace OOP_Project
 {
     public class Product
     {
-        public string Name;
-        public string Description;
-        public string Manufacture;
-        public decimal Price;
-        public int Items;
-        public decimal MonthlyInterestRate;
-        public int InvItems;
+        private string Name;
+        private string Condition;
+        private string Quality;
+        private decimal Price;
+        private decimal Weight;
+        private decimal MonthlyInterestRate;
+        private int Items;
 
+        public string GetName { get; set; }       
+        public string GetCondition { get; set; }
+        public string GetQuality { get; set; }
+        public decimal GetPrice { get; set; }
+        public decimal GetWeight { get; set; }
+        
+
+        
          public void DeductItems(int items = 0)
          {
                 if (items != 0)
