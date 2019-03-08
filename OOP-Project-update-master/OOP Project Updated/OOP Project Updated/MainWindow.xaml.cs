@@ -47,6 +47,20 @@ namespace OOP_Project_Updated
 
             jewelry.Show();
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            Settings settings = new Settings();
+            settings.Show();
+        }
     }
+    
+    public class DataStorage
+    {
+        public List<Person> customers = new List<Person>();
+        public List<Product> products = new List<Product>();
+    }
+    
    
 }

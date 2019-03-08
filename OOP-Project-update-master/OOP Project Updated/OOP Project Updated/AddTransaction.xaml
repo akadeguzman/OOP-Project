@@ -6,23 +6,18 @@
         xmlns:local="clr-namespace:OOP_Project_Updated"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="AddTransaction" Height="450" Width="800"
-        WindowStartupLocation="CenterScreen">
+        Title="AddTransaction" Height="450" Width="800" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" Background="Transparent" WindowStartupLocation="CenterScreen">
 
     <Grid>
-        <Rectangle Fill="#FFED1B2D" HorizontalAlignment="Left" Height="66" Stroke="Black" VerticalAlignment="Top" Width="792" Margin="0,353,0,0"/>
 
-        <Rectangle Fill="#FF006B41" HorizontalAlignment="Left" Height="220" Margin="0,93,0,0" Stroke="Black" VerticalAlignment="Top" Width="792"/>
-
-        <Rectangle Fill="#FFF5821F" HorizontalAlignment="Left" Height="66" Stroke="Black" VerticalAlignment="Top" Width="792" Margin="0,-3,0,0"/>
-        <Rectangle Fill="White" HorizontalAlignment="Left" Height="399" Margin="28,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="290"/>
+        <Rectangle RadiusY="8" RadiusX="8" Fill="White"/>
 
         <!--Text Box-->
-        <Button  Content="Add Transaction" Click="Button_Click" HorizontalAlignment="Left" Margin="106,366,0,0" VerticalAlignment="Top" Width="139"/>
+        <Button  Content="Add Transaction" Click="Button_Click" HorizontalAlignment="Left" Margin="106,394,0,0" VerticalAlignment="Top" Width="139"/>
 
         <!--Transaction-->
 
-        <ComboBox Name="cmbJewelry" HorizontalAlignment="Left" Margin="145,128,0,0" VerticalAlignment="Top" Width="120">
+        <ComboBox Name="cmbJewelry" HorizontalAlignment="Left" Margin="145,128,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="CmbJewelry_SelectionChanged">
 
         </ComboBox>
 
@@ -30,50 +25,51 @@
 
 
 
-        <Label Content="Weight:" HorizontalAlignment="Left" Margin="78,187,0,0" VerticalAlignment="Top"/>
+        <Label Content="Weight:" HorizontalAlignment="Left" Margin="78,194,0,0" VerticalAlignment="Top"/>
 
-        <Label Content="Date:" HorizontalAlignment="Left" Margin="103,321,0,0" VerticalAlignment="Top"/>
+        <Label Content="Date:" HorizontalAlignment="Left" Margin="103,349,0,0" VerticalAlignment="Top"/>
 
         <!--Image-->
 
-        <Separator Margin="57,43,491,356"></Separator>
-
         <!---->
         
-        <Label Content="Add Transaction" FontWeight="UltraBlack" HorizontalAlignment="Left" Margin="47,24,0,0" VerticalAlignment="Top"/>
+        <Label Content="Add Transaction" FontFamily="Segoe UI Black" FontSize="20" Margin="30,15" VerticalAlignment="Top" HorizontalAlignment="Left"/>
         <Label Content="Customer:" HorizontalAlignment="Left" Margin="57,74,0,0" VerticalAlignment="Top"/>
-        <ComboBox Name="cmbCustomer" HorizontalAlignment="Left" Margin="126,75,0,0" VerticalAlignment="Top" Width="115"/>
         
         <Button Click="Button_Click_1" Style="{StaticResource MaterialDesignFloatingActionMiniDarkButton}"
-        ToolTip="MaterialDesignFloatingActionMiniDarkButton" Margin="259,68,491,311" Height="Auto" Width="Auto"> 
+        ToolTip="MaterialDesignFloatingActionMiniDarkButton" Margin="259,60,491,342" Height="Auto" Width="Auto" RenderTransformOrigin="0.51,0.516"> 
         <materialDesign:PackIcon
         Kind="Add"
         Height="24"
         Width="24" />
         </Button>
+       
+        <ComboBox Name="cmbCustomer" HorizontalAlignment="Left" Margin="126,75,0,0" VerticalAlignment="Top" Width="115"/>
         
         <Label Content="Quality:" HorizontalAlignment="Left" Margin="78,156,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="cmbQuality" HorizontalAlignment="Left" Margin="145,156,0,0" VerticalAlignment="Top" Width="120" Height="26"/>
+        <ComboBox x:Name="cmbQuality" HorizontalAlignment="Left" Margin="145,156,0,0" VerticalAlignment="Top" Width="120" Height="26" SelectionChanged="CmbQuality_SelectionChanged"/>
         
         <Label Content="Jewelry:" HorizontalAlignment="Left" Margin="78,125,0,0" VerticalAlignment="Top" Width="50"/>
-        <TextBox Name="txtWeight" materialDesign:HintAssist.Hint="grams"  Margin="145,187,572,202"/>
+        <TextBox Name="txtWeight" materialDesign:HintAssist.Hint="grams"  Margin="145,195,572,229"/>
         
         
         <Label Content="Condition:" HorizontalAlignment="Left" Margin="63,225,0,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="cmbCondition"  HorizontalAlignment="Left" Margin="145,224,0,0" VerticalAlignment="Top" Width="120"/>
         
-        <Label Content="Amount to Loan:" HorizontalAlignment="Left" Margin="126,266,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="AmountLoaned" HorizontalAlignment="Left" Height="24" Margin="106,289,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="139"/>
+        <Label Content="Amount to Loan:" HorizontalAlignment="Left" Margin="126,285,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="AmountLoaned" HorizontalAlignment="Left" Height="24" Margin="106,308,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="139"/>
         
         <!---->
 
-        <Separator Margin="57,116,491,294"/>
-        <Separator Margin="57,251,491,145"/>
-        <DatePicker HorizontalAlignment="Left" Margin="145,323,0,0" VerticalAlignment="Top" Width="75"/>
+        <Separator Margin="57,98,491,312"/>
+        <Separator Margin="57,259,491,167"/>
+        <DatePicker HorizontalAlignment="Left" Margin="145,351,0,0" VerticalAlignment="Top" Width="75"/>
 
         <materialDesign:Snackbar
         MessageQueue="{materialDesign:MessageQueue}"
         x:Name="SnackbarThree" />
+        
+        <TextBox x:Name="txtDisplay" HorizontalAlignment="Left" Height="23" Margin="359,311,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </Window>

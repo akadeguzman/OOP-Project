@@ -67,3 +67,5 @@ C:\Users\Adrian\Documents\GitHub\OOP-Project\OOP-Project-update-master\OOP Proje
 C:\Users\Adrian\Documents\GitHub\OOP-Project\OOP-Project-update-master\OOP Project Updated\OOP Project Updated\bin\Debug\MaterialDesignThemes.Wpf.xml
 C:\Users\Adrian\Documents\GitHub\OOP-Project\OOP-Project-update-master\OOP Project Updated\OOP Project Updated\obj\Debug\App.baml
 C:\Users\Adrian\Documents\GitHub\OOP-Project\OOP-Project-update-master\OOP Project Updated\OOP Project Updated\obj\Debug\OOP Project Updated.csproj.CopyComplete
+C:\Users\Adrian\Documents\GitHub\OOP-Project\OOP-Project-update-master\OOP Project Updated\OOP Project Updated\obj\Debug\Settings.g.cs
+C:\Users\Adrian\Documents\GitHub\OOP-Project\OOP-Project-update-master\OOP Project Updated\OOP Project Updated\obj\Debug\Settings.baml

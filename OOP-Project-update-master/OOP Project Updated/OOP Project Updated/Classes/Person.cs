@@ -16,9 +16,10 @@ namespace OOP_Project
         private string Address;
         private string MobileNumber = "+63";
 
-        public string GetAddress { get; set; }        
+        public string GetAddress {get; set;}
+        
 
-        public Person(string firstName, string middleInitial, string lastName)
+        public Person(string firstName, string middleInitial, string lastName, string address, string MobileNumber)
         {
             FirstName = firstName;
             MiddleInitial = middleInitial;
@@ -46,6 +47,7 @@ namespace OOP_Project
 
         public string GetFullName()
         {
+            
             LastName = GetTitleCase(LastName);
             FirstName = GetTitleCase(FirstName);
 
@@ -56,10 +58,9 @@ namespace OOP_Project
 
         public string GetMobileNumber
         {
-                        
             get
             {
-                return MobileNumber;
+                return GetMobileNumber;
             }
             set
             {
@@ -69,7 +70,8 @@ namespace OOP_Project
                 }
                 else
                     MobileNumber = " ";
-                
+
+
             }
         }
 
