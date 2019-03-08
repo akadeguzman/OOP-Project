@@ -21,8 +21,7 @@ namespace OOP_Project_Updated
     /// Interaction logic for AddTransaction.xaml
     /// </summary>
     public partial class AddTransaction : Window
-    {
-         
+    {     
 
         public MainWindow main;
         public Person Customer;
@@ -62,12 +61,13 @@ namespace OOP_Project_Updated
 
 
             this.Hide();
+            loanTransaction.Show();
 
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            this.Hide();
 
             AddCustomer addCustomer = new AddCustomer();
             
@@ -120,6 +120,10 @@ namespace OOP_Project_Updated
             }
         }
 
-        
+        private void Window_Activated(object sender, EventArgs e)
+        {
+            foreach (Person person in data.customers)
+                txtDisplay.Text = person.GetFullName();
+        }
     }
 }

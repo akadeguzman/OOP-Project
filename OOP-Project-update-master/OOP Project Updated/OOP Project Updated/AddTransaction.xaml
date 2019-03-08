@@ -6,70 +6,91 @@
         xmlns:local="clr-namespace:OOP_Project_Updated"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="AddTransaction" Height="450" Width="800" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" Background="Transparent" WindowStartupLocation="CenterScreen">
+        Title="AddTransaction" Height="450" Width="800" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" Background="Transparent" WindowStartupLocation="CenterScreen" Activated="Window_Activated">
 
     <Grid>
-
         <Rectangle RadiusY="8" RadiusX="8" Fill="White"/>
 
-        <!--Text Box-->
-        <Button  Content="Add Transaction" Click="Button_Click" HorizontalAlignment="Left" Margin="106,394,0,0" VerticalAlignment="Top" Width="139"/>
 
-        <!--Transaction-->
+        <!--Button-->
+        <Button  Content="Add Transaction" Click="Button_Click" HorizontalAlignment="Left" Margin="138,397,0,0" VerticalAlignment="Top" Width="164" Height="33"/>
 
-        <ComboBox Name="cmbJewelry" HorizontalAlignment="Left" Margin="145,128,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="CmbJewelry_SelectionChanged">
+        <Button Click="Button_Click_1" Style="{StaticResource MaterialDesignFloatingActionMiniDarkButton}"
+                ToolTip="MaterialDesignFloatingActionMiniDarkButton" Margin="312,62,439,339" Height="Auto" Width="Auto" RenderTransformOrigin="0.51,0.516">
+            <materialDesign:PackIcon
+                Kind="Add"
+                Height="24"
+                Width="24" />
+        </Button>
+        
+        <!--Boxes-->
+
+        <ComboBox Name="cmbCustomer" HorizontalAlignment="Left" Margin="160,72,0,0" VerticalAlignment="Top" Width="136" Height="29"/>
+
+        <ComboBox Name="cmbJewelry" HorizontalAlignment="Left" Margin="160,121,0,0" VerticalAlignment="Top" Width="142" SelectionChanged="CmbJewelry_SelectionChanged" Height="29">
 
         </ComboBox>
 
-        <!--Items-->
+        <ComboBox x:Name="cmbQuality" HorizontalAlignment="Left" Margin="160,155,0,0" VerticalAlignment="Top" Width="142" Height="26" SelectionChanged="CmbQuality_SelectionChanged"/>
 
+        <TextBox Name="txtWeight" materialDesign:HintAssist.Hint="grams"  Margin="160,194,541,229"/>
 
+        <ComboBox x:Name="cmbCondition"  HorizontalAlignment="Left" Margin="160,224,0,0" VerticalAlignment="Top" Width="142" Height="28"/>
 
-        <Label Content="Weight:" HorizontalAlignment="Left" Margin="78,194,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="AmountLoaned" HorizontalAlignment="Left" Height="24" Margin="138,310,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164"/>
 
-        <Label Content="Date:" HorizontalAlignment="Left" Margin="103,349,0,0" VerticalAlignment="Top"/>
+        <DatePicker HorizontalAlignment="Left" Margin="183,354,0,0" VerticalAlignment="Top" Width="90" Height="25"/>
 
-        <!--Image-->
+        <!--Labels-->
+
+        <Label Content="Customer:" HorizontalAlignment="Left" Margin="66,74,0,0" VerticalAlignment="Top" Height="27" Width="75"/>
+
+        <Label Content="Weight:" HorizontalAlignment="Left" Margin="81,193,0,0" VerticalAlignment="Top" Height="27" Width="60"/>
+
+        <Label Content="Date:" HorizontalAlignment="Left" Margin="135,352,0,0" VerticalAlignment="Top" Height="26" Width="42"/>
+
+        <Label Content="Quality:" HorizontalAlignment="Left" Margin="81,155,0,0" VerticalAlignment="Top" Height="26" Width="60"/>
+
+        <Label Content="Jewelry:" HorizontalAlignment="Left" Margin="81,123,0,0" VerticalAlignment="Top" Width="60" Height="27"/>
+
+        <Label Content="Condition:" HorizontalAlignment="Left" Margin="64,225,0,0" VerticalAlignment="Top" Height="26" Width="77"/>
+
+        <Label Content="Amount to Loan:" HorizontalAlignment="Left" Margin="161,287,0,0" VerticalAlignment="Top" Height="26" Width="117"/>
 
         <!---->
         
         <Label Content="Add Transaction" FontFamily="Segoe UI Black" FontSize="20" Margin="30,15" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-        <Label Content="Customer:" HorizontalAlignment="Left" Margin="57,74,0,0" VerticalAlignment="Top"/>
-        
-        <Button Click="Button_Click_1" Style="{StaticResource MaterialDesignFloatingActionMiniDarkButton}"
-        ToolTip="MaterialDesignFloatingActionMiniDarkButton" Margin="259,60,491,342" Height="Auto" Width="Auto" RenderTransformOrigin="0.51,0.516"> 
-        <materialDesign:PackIcon
-        Kind="Add"
-        Height="24"
-        Width="24" />
-        </Button>
-       
-        <ComboBox Name="cmbCustomer" HorizontalAlignment="Left" Margin="126,75,0,0" VerticalAlignment="Top" Width="115"/>
-        
-        <Label Content="Quality:" HorizontalAlignment="Left" Margin="78,156,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="cmbQuality" HorizontalAlignment="Left" Margin="145,156,0,0" VerticalAlignment="Top" Width="120" Height="26" SelectionChanged="CmbQuality_SelectionChanged"/>
-        
-        <Label Content="Jewelry:" HorizontalAlignment="Left" Margin="78,125,0,0" VerticalAlignment="Top" Width="50"/>
-        <TextBox Name="txtWeight" materialDesign:HintAssist.Hint="grams"  Margin="145,195,572,229"/>
-        
-        
-        <Label Content="Condition:" HorizontalAlignment="Left" Margin="63,225,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="cmbCondition"  HorizontalAlignment="Left" Margin="145,224,0,0" VerticalAlignment="Top" Width="120"/>
-        
-        <Label Content="Amount to Loan:" HorizontalAlignment="Left" Margin="126,285,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="AmountLoaned" HorizontalAlignment="Left" Height="24" Margin="106,308,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="139"/>
+            
         
         <!---->
+        <Separator Margin="30,259,425,166"/>
 
-        <Separator Margin="57,98,491,312"/>
-        <Separator Margin="57,259,491,167"/>
-        <DatePicker HorizontalAlignment="Left" Margin="145,351,0,0" VerticalAlignment="Top" Width="75"/>
+
+        <!--Image-->
+
+        <Image Source="Images\Logo For Project copy.png" Margin="410,0,0,0" HorizontalAlignment="Center" Stretch="UniformToFill"/>
+        <Rectangle Margin="410,0,0,0">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#CC128D93" Offset="1"/>
+                    <GradientStop Color="#CC4682EA"/>
+                    <GradientStop Color="#CC289EB8" Offset="0.566"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <StackPanel Margin="420,80,0,50">
+            <TextBlock Text="Only provide information that is true and correct" Foreground="White" HorizontalAlignment="Center" FontSize="40" FontFamily="Champagne &amp; Limousines" FontWeight="Bold" TextAlignment="Center" TextWrapping="Wrap" Margin="9,0,8,0"/>
+            <TextBlock Text="Loan Upon A Store" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" Width="280" FontSize="24" FontFamily="Champagne &amp; Limousines" TextWrapping="Wrap" TextAlignment="Center" Margin="0,50,0,0"/>
+            <TextBlock Text="Loan Now, Pay Later.For your total Money Needs" FontWeight="UltraLight" Foreground="White" FontSize="22" FontFamily="Champagne &amp; Limousines" TextWrapping="Wrap" TextAlignment="Center" Margin="1"/>
+        </StackPanel>
+
+        <!--SnackBar-->
 
         <materialDesign:Snackbar
         MessageQueue="{materialDesign:MessageQueue}"
         x:Name="SnackbarThree" />
-        
-        <TextBox x:Name="txtDisplay" HorizontalAlignment="Left" Height="23" Margin="359,311,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
 
     </Grid>
 </Window>

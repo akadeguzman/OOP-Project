@@ -6,52 +6,54 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OOP_Project_Updated"
         mc:Ignorable="d"
-        Title="AddCustomer" Height="450" Width="800">
+        Title="AddCustomer" Height="450" Width="800" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" Background="Transparent" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Rectangle Fill="#FFED1B2D" HorizontalAlignment="Left" Height="66" Stroke="Black" VerticalAlignment="Top" Width="792" Margin="0,353,0,0"/>
+        <Rectangle RadiusY="8" RadiusX="8" Fill="White"/>
 
-        <Rectangle Fill="#FF006B41" HorizontalAlignment="Left" Height="220" Margin="0,105,0,0" Stroke="Black" VerticalAlignment="Top" Width="792"/>
-
-        <Rectangle Fill="#FFF5821F" HorizontalAlignment="Left" Height="66" Stroke="Black" VerticalAlignment="Top" Width="792"/>
-        <Rectangle Fill="White" HorizontalAlignment="Left" Height="342" Margin="52,55,0,0" Stroke="Black" VerticalAlignment="Top" Width="288"/>
-
-        <Label Content="First Name" HorizontalAlignment="Left" Margin="104,115,0,0" VerticalAlignment="Top"/>
-        <Label Content="Middle Initial" HorizontalAlignment="Left" Margin="92,150,0,0" VerticalAlignment="Top"/>
-        <Label Content="Last Name" HorizontalAlignment="Left" Margin="105,186,0,0" VerticalAlignment="Top"/>
+        <Label Content="First Name" HorizontalAlignment="Left" Margin="72,80,0,0" VerticalAlignment="Top" Height="39" Width="90"/>
+        <Label Content="Middle Initial" HorizontalAlignment="Left" Margin="56,134,0,0" VerticalAlignment="Top" Height="38" Width="106"/>
+        <Label Content="Last Name" HorizontalAlignment="Left" Margin="74,187,0,0" VerticalAlignment="Top" Height="40" Width="88"/>
 
         <!--Text Box-->
-        <TextBox x:Name="txtFirstName" HorizontalAlignment="Left" Height="23" Margin="194,115,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtMiddleInitial" HorizontalAlignment="Left" Height="23" Margin="194,150,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtLastName" HorizontalAlignment="Left" Height="23" Margin="194,189,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
-
-
-        <Separator Margin="73,204,470,174" RenderTransformOrigin="0.459,-0.488"/>
+        <TextBox x:Name="txtFirstName" HorizontalAlignment="Left" Height="35" Margin="192,80,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="168"/>
+        <TextBox x:Name="txtMiddleInitial" HorizontalAlignment="Left" Height="34" Margin="192,134,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="168"/>
+        <TextBox x:Name="txtLastName" HorizontalAlignment="Left" Height="35" Margin="192,192,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="168"/>
 
         <!--Image-->
 
-        <Image Source="Images/21145973320_6a2ee460ca_b.jpg"  HorizontalAlignment="Left" Height="377" Margin="384,20,0,0" VerticalAlignment="Top" Width="387">
-            <Image.Effect>
-                <DropShadowEffect ShadowDepth="7" Opacity="0.985" BlurRadius="27"/>
-            </Image.Effect>
-        </Image>
+        <Image Source="Images\Logo For Project copy.png" Margin="410,0,0,0" HorizontalAlignment="Center" Stretch="UniformToFill"/>
+        <Rectangle Margin="410,0,0,0">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#CC128D93" Offset="1"/>
+                    <GradientStop Color="#CC4682EA"/>
+                    <GradientStop Color="#CC289EB8" Offset="0.566"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <StackPanel Margin="420,80,0,50">
+            <TextBlock Text="Only provide information that is true and correct" Foreground="White" HorizontalAlignment="Center" FontSize="40" FontFamily="Champagne &amp; Limousines" FontWeight="Bold" TextAlignment="Center" TextWrapping="Wrap" Margin="9,0,8,0"/>
+            <TextBlock Text="Loan Upon A Store" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" Width="280" FontSize="24" FontFamily="Champagne &amp; Limousines" TextWrapping="Wrap" TextAlignment="Center" Margin="0,50,0,0"/>
+            <TextBlock Text="Loan Now, Pay Later.For your total Money Needs" FontWeight="UltraLight" Foreground="White" FontSize="22" FontFamily="Champagne &amp; Limousines" TextWrapping="Wrap" TextAlignment="Center" Margin="1"/>
+        </StackPanel>
 
         <!--Image-->
 
 
-        <Label Content="Customer Details" FontWeight="UltraBlack" HorizontalAlignment="Left" Margin="70,71,0,0" VerticalAlignment="Top"/>
-        <Separator Margin="73,81,470,297" RenderTransformOrigin="0.459,-0.488"/>
-        <Button x:Name="btnNext" Content="Next" HorizontalAlignment="Left" Margin="160,353,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click" Height="32"/>
-        <Label Content="Contact No." HorizontalAlignment="Left" Margin="93,233,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtContactNumber" HorizontalAlignment="Left" Height="23" Margin="214,237,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
-        <Label Content="Address" HorizontalAlignment="Left" Margin="121,264,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtAddress" HorizontalAlignment="Left" Height="23" Margin="194,267,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="160,316,0,0" VerticalAlignment="Top" Width="75" Height="32" Click="BtnSave_Click"/>
+        <Label Content="Choose Transaction" FontFamily="Segoe UI Black" FontSize="24" Margin="22,33,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <Button x:Name="btnNext" Content="Next" HorizontalAlignment="Left" Margin="164,358,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click" Height="32"/>
+        <Label Content="Contact No." HorizontalAlignment="Left" Margin="64,248,0,0" VerticalAlignment="Top" Height="40" Width="98"/>
+        <TextBox x:Name="txtContactNumber" HorizontalAlignment="Left" Height="35" Margin="226,255,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134"/>
+        <Label Content="Address" HorizontalAlignment="Left" Margin="96,307,0,0" VerticalAlignment="Top" Height="39" Width="70"/>
+        <TextBox x:Name="txtAddress" HorizontalAlignment="Left" Height="35" Margin="200,311,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160"/>
+        <Button x:Name="Next" Content="Save" HorizontalAlignment="Left" Margin="164,395,0,0" VerticalAlignment="Top" Width="76" Height="32" Click="Next_Click"/>
 
         <!--popup-->
         <materialDesign:Snackbar
         MessageQueue="{materialDesign:MessageQueue}"
         x:Name="SnackbarThree" />
-        <Label Content="+63" HorizontalAlignment="Left" Margin="183,237,0,0" VerticalAlignment="Top"/>
+        <Label Content="+63" HorizontalAlignment="Left" Margin="184,255,0,0" VerticalAlignment="Top" Height="39" Width="42"/>
 
     </Grid>
 </Window>
