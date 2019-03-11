@@ -45,14 +45,12 @@ C:\Users\Adrian\Documents\GitHub\OOP-Project\OOP-Project-update-master\OOP Proje
 C:\Users\Adrian\Documents\GitHub\OOP-Project\OOP-Project-update-master\OOP Project Updated\OOP Project Updated\bin\Debug\OOP Project Updated.pdb
 C:\Users\Adrian\Documents\GitHub\OOP-Project\OOP-Project-update-master\OOP Project Updated\OOP Project Updated\obj\Debug\OOP Project Updated.csprojAssemblyReference.cache
 C:\Users\Adrian\Documents\GitHub\OOP-Project\OOP-Project-update-master\OOP Project Updated\OOP Project Updated\obj\Debug\AddCustomer.g.cs
-C:\Users\Adrian\Documents\GitHub\OOP-Project\OOP-Project-update-master\OOP Project Updated\OOP Project Updated\obj\Debug\AddJewelry.g.cs
 C:\Users\Adrian\Documents\GitHub\OOP-Project\OOP-Project-update-master\OOP Project Updated\OOP Project Updated\obj\Debug\AddTransaction.g.cs
 C:\Users\Adrian\Documents\GitHub\OOP-Project\OOP-Project-update-master\OOP Project Updated\OOP Project Updated\obj\Debug\MainWindow.g.cs
 C:\Users\Adrian\Documents\GitHub\OOP-Project\OOP-Project-update-master\OOP Project Updated\OOP Project Updated\obj\Debug\App.g.cs
 C:\Users\Adrian\Documents\GitHub\OOP-Project\OOP-Project-update-master\OOP Project Updated\OOP Project Updated\obj\Debug\OOP Project Updated_MarkupCompile.cache
 C:\Users\Adrian\Documents\GitHub\OOP-Project\OOP-Project-update-master\OOP Project Updated\OOP Project Updated\obj\Debug\OOP Project Updated_MarkupCompile.lref
 C:\Users\Adrian\Documents\GitHub\OOP-Project\OOP-Project-update-master\OOP Project Updated\OOP Project Updated\obj\Debug\AddCustomer.baml
-C:\Users\Adrian\Documents\GitHub\OOP-Project\OOP-Project-update-master\OOP Project Updated\OOP Project Updated\obj\Debug\AddJewelry.baml
 C:\Users\Adrian\Documents\GitHub\OOP-Project\OOP-Project-update-master\OOP Project Updated\OOP Project Updated\obj\Debug\AddTransaction.baml
 C:\Users\Adrian\Documents\GitHub\OOP-Project\OOP-Project-update-master\OOP Project Updated\OOP Project Updated\obj\Debug\MainWindow.baml
 C:\Users\Adrian\Documents\GitHub\OOP-Project\OOP-Project-update-master\OOP Project Updated\OOP Project Updated\obj\Debug\OOP Project Updated.g.resources
@@ -69,3 +67,5 @@ C:\Users\Adrian\Documents\GitHub\OOP-Project\OOP-Project-update-master\OOP Proje
 C:\Users\Adrian\Documents\GitHub\OOP-Project\OOP-Project-update-master\OOP Project Updated\OOP Project Updated\obj\Debug\OOP Project Updated.csproj.CopyComplete
 C:\Users\Adrian\Documents\GitHub\OOP-Project\OOP-Project-update-master\OOP Project Updated\OOP Project Updated\obj\Debug\Settings.g.cs
 C:\Users\Adrian\Documents\GitHub\OOP-Project\OOP-Project-update-master\OOP Project Updated\OOP Project Updated\obj\Debug\Settings.baml
+C:\Users\Adrian\Documents\GitHub\OOP-Project\OOP-Project-update-master\OOP Project Updated\OOP Project Updated\obj\Debug\AddPayment.g.cs
+C:\Users\Adrian\Documents\GitHub\OOP-Project\OOP-Project-update-master\OOP Project Updated\OOP Project Updated\obj\Debug\AddPayment.baml

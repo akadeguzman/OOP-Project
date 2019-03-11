@@ -10,60 +10,68 @@
 
     <Grid>
         <Rectangle RadiusY="8" RadiusX="8" Fill="White"/>
-
-
-        <!--Button-->
-        <Button  Content="Add Transaction" Click="Button_Click" HorizontalAlignment="Left" Margin="138,397,0,0" VerticalAlignment="Top" Width="164" Height="33"/>
+        <Rectangle Fill="#FF673AB7" Margin="222,309,423,26"/>
 
         <Button Click="Button_Click_1" Style="{StaticResource MaterialDesignFloatingActionMiniDarkButton}"
-                ToolTip="MaterialDesignFloatingActionMiniDarkButton" Margin="312,62,439,339" Height="Auto" Width="Auto" RenderTransformOrigin="0.51,0.516">
+                ToolTip="MaterialDesignFloatingActionMiniDarkButton" Margin="352,58,410,353" Height="Auto" Width="Auto" RenderTransformOrigin="0.51,0.516">
             <materialDesign:PackIcon
-                Kind="Add"
+                Kind="PersonAddOutline"
                 Height="24"
                 Width="24" />
         </Button>
-        
+
+
+        <!--Button-->
+        <Button  Content="Add Transaction" Click="Button_Click" HorizontalAlignment="Left" Margin="40,373,0,0" VerticalAlignment="Top" Width="145" Height="44"/>
+        <Button  Content="Compute" Click="Button_Click_2" HorizontalAlignment="Left" Margin="256,367,0,0" VerticalAlignment="Top" Width="90" Height="33" Background="#FFD3D339" BorderBrush="{x:Null}" Foreground="#DD000000"/>
+
         <!--Boxes-->
 
-        <ComboBox Name="cmbCustomer" HorizontalAlignment="Left" Margin="160,72,0,0" VerticalAlignment="Top" Width="136" Height="29"/>
+        <ComboBox materialDesign:HintAssist.Hint="Customer" Name="cmbCustomer" Margin="40,69,465,353" FontSize="14"/>
 
-        <ComboBox Name="cmbJewelry" HorizontalAlignment="Left" Margin="160,121,0,0" VerticalAlignment="Top" Width="142" SelectionChanged="CmbJewelry_SelectionChanged" Height="29">
+        <ComboBox materialDesign:HintAssist.Hint="Jewelry" Name="cmbJewelry" HorizontalAlignment="Left" Margin="40,102,0,0" VerticalAlignment="Top" Width="295" SelectionChanged="CmbJewelry_SelectionChanged" Height="29" FontSize="14"/>
 
-        </ComboBox>
 
-        <ComboBox x:Name="cmbQuality" HorizontalAlignment="Left" Margin="160,155,0,0" VerticalAlignment="Top" Width="142" Height="26" SelectionChanged="CmbQuality_SelectionChanged"/>
+        <ComboBox materialDesign:HintAssist.Hint="Quality" x:Name="cmbQuality" HorizontalAlignment="Left" Margin="40,136,0,0" VerticalAlignment="Top" Width="295" Height="31" SelectionChanged="CmbQuality_SelectionChanged" FontSize="14"/>
 
-        <TextBox Name="txtWeight" materialDesign:HintAssist.Hint="grams"  Margin="160,194,541,229"/>
+        <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}" Name="txtWeight"  Margin="228,184,482,227">
+            <materialDesign:HintAssist.Hint>
+                <StackPanel
+                     Orientation="Horizontal" Height="18">
+                    <materialDesign:PackIcon
+                         Kind="Weight" />
+                    <TextBlock>
+                         Weight
+                    </TextBlock>
+                </StackPanel>
+            </materialDesign:HintAssist.Hint>
+        </TextBox>
 
-        <ComboBox x:Name="cmbCondition"  HorizontalAlignment="Left" Margin="160,224,0,0" VerticalAlignment="Top" Width="142" Height="28"/>
+        <TextBox
+            x:Name="txtCondition"
+            Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}"
+            Margin="40,191,598,0"
+            VerticalAlignment="Top"
+            Height="73"
+            TextWrapping="Wrap"
+            VerticalScrollBarVisibility="Auto"
+            materialDesign:HintAssist.Hint="Condition"/>
 
-        <TextBox x:Name="AmountLoaned" HorizontalAlignment="Left" Height="24" Margin="138,310,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164"/>
+        <TextBox x:Name="txtAmountLoaned" materialDesign:HintAssist.Hint="Amount to Loan" HorizontalAlignment="Left" Height="24" Margin="66,284,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="118" FontSize="14"/>
 
-        <DatePicker HorizontalAlignment="Left" Margin="183,354,0,0" VerticalAlignment="Top" Width="90" Height="25"/>
+        <TextBox x:Name="txtPrice" materialDesign:HintAssist.Hint="TOTAL PRICE" Style="{StaticResource MaterialDesignFloatingHintTextBox}" HorizontalAlignment="Left" Height="41" Margin="264,309,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="86" FontSize="13" FontStyle="Italic" FontWeight="Bold" Foreground="Azure"/>
+
+        <DatePicker x:Name="txtDate" materialDesign:HintAssist.Hint="Date Today" HorizontalAlignment="Left" Margin="66,323,0,0" VerticalAlignment="Top" Width="92" Height="27" FontSize="14"/>
 
         <!--Labels-->
 
-        <Label Content="Customer:" HorizontalAlignment="Left" Margin="66,74,0,0" VerticalAlignment="Top" Height="27" Width="75"/>
-
-        <Label Content="Weight:" HorizontalAlignment="Left" Margin="81,193,0,0" VerticalAlignment="Top" Height="27" Width="60"/>
-
-        <Label Content="Date:" HorizontalAlignment="Left" Margin="135,352,0,0" VerticalAlignment="Top" Height="26" Width="42"/>
-
-        <Label Content="Quality:" HorizontalAlignment="Left" Margin="81,155,0,0" VerticalAlignment="Top" Height="26" Width="60"/>
-
-        <Label Content="Jewelry:" HorizontalAlignment="Left" Margin="81,123,0,0" VerticalAlignment="Top" Width="60" Height="27"/>
-
-        <Label Content="Condition:" HorizontalAlignment="Left" Margin="64,225,0,0" VerticalAlignment="Top" Height="26" Width="77"/>
-
-        <Label Content="Amount to Loan:" HorizontalAlignment="Left" Margin="161,287,0,0" VerticalAlignment="Top" Height="26" Width="117"/>
-
+        <materialDesign:PackIcon Kind="PhilippinePeso" Margin="232,320,0,0" Height="30" Width="23" Foreground="Azure"/>
+        <materialDesign:PackIcon Kind="PhilippinePeso" Margin="40,283,0,0" Height="26" Width="22" />
         <!---->
         
-        <Label Content="Add Transaction" FontFamily="Segoe UI Black" FontSize="20" Margin="30,15" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-            
-        
+        <Label Content="Add Transaction" FontFamily="Segoe UI Black" FontSize="20" Margin="27,14,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                  
         <!---->
-        <Separator Margin="30,259,425,166"/>
 
 
         <!--Image-->
@@ -90,6 +98,17 @@
         <materialDesign:Snackbar
         MessageQueue="{materialDesign:MessageQueue}"
         x:Name="SnackbarThree" />
+
+        <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}" x:Name="txtdeductedWeight"  Margin="228,228,436,183">
+            <materialDesign:HintAssist.Hint>
+                <StackPanel
+                    Orientation="Horizontal" Height="18">
+                    <materialDesign:PackIcon
+                        Kind="Weight" />
+                    <TextBlock><Run Text="Crystal Stone's Weight"/></TextBlock>
+                </StackPanel>
+            </materialDesign:HintAssist.Hint>
+        </TextBox>
 
 
     </Grid>

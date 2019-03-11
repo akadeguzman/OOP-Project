@@ -25,12 +25,11 @@ namespace OOP_Project_Updated
 
         public MainWindow main;
         public Person Customer;
-        public Product product = new Product();
         public Settings Settings;
-        public DataStorage data = new DataStorage();
+        public Product product = new Product();
+        public DataStorage data;
 
         List<string> JewelryType = new List<string> { "Bracelet", "Necklace", "Earrings", "Ring" };
-        List<string> Condition = new List<string> { "Scratched", "Broken Locks", "Missing Stones", "Dented" };
         List<string> Quality = new List<string> { "10k", "18k", "21k" };
 
         public AddTransaction()
@@ -38,38 +37,46 @@ namespace OOP_Project_Updated
             InitializeComponent();
             foreach (string type in JewelryType)
                 cmbJewelry.Items.Add(type);
-
-            foreach (string conditions in Condition)
-                cmbCondition.Items.Add(conditions);
-            
+                        
             foreach (string quality in Quality)
                 cmbQuality.Items.Add(quality);
-
 
             cmbJewelry.SelectedItem = "choose";            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow loanTransaction = new MainWindow();
+            MainWindow main = new MainWindow();
+            {
+                main.data = data;
+            }
 
-            //-------------------------------------------------------------------
+            string[] initialDetails = new string[8];
 
+            cmbCustomer.Text = initialDetails[0];
+            cmbJewelry.Text = initialDetails[1];
+            cmbQuality.Text = initialDetails[2];
+            txtCondition.Text = initialDetails[3];
+            txtWeight.Text = initialDetails[4];
+            txtdeductedWeight.Text = initialDetails[5];
+            txtAmountLoaned.Text = initialDetails[6];
+            txtDate.Text = initialDetails[7];
+            txtPrice.Text = initialDetails[8];
+
+            foreach (string details in initialDetails)
+                data.transactionDetails.Add(details);
             
-
-            
-
-
             this.Hide();
-            loanTransaction.Show();
+            main.Show();
 
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            this.Hide();
-
             AddCustomer addCustomer = new AddCustomer();
+            {
+                addCustomer.data = data;
+            }
             
             addCustomer.Show();
         }
@@ -98,23 +105,24 @@ namespace OOP_Project_Updated
 
         private void CmbQuality_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            
-
             switch (cmbQuality.SelectedItem.ToString())
             {
                 case "10k":
                     product.GetQuality = "10k";
-                    
+                    product.GetPrice = data.qualities[0];                   
+
                     break;
 
                 case "18k":
                     product.GetQuality = "18k";
-                    
+                    product.GetPrice = data.qualities[1];
+
                     break;
 
                 case "21k":
                     product.GetQuality = "21k";
-                   
+                    product.GetPrice = data.qualities[2];
+
                     break;
 
             }
@@ -122,8 +130,35 @@ namespace OOP_Project_Updated
 
         private void Window_Activated(object sender, EventArgs e)
         {
+            cmbCustomer.Items.Clear();
             foreach (Person person in data.customers)
-                txtDisplay.Text = person.GetFullName();
+                cmbCustomer.Items.Add(person.GetFullName());
+
+                                      
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                decimal initialWeight = Convert.ToDecimal(txtWeight.Text);
+                decimal deductedWeight = Convert.ToDecimal(txtdeductedWeight.Text);
+
+                decimal finalWeight = (initialWeight - deductedWeight);
+
+                txtWeight.Text = finalWeight.ToString();
+
+                decimal compute = product.GetPrice * Convert.ToDecimal(txtWeight.Text);
+                txtPrice.Text = compute.ToString();
+
+                                
+            }
+            catch (System.FormatException)
+            {
+                MessageBox.Show("Weight field is required. Please input weight", "Missing Details", MessageBoxButton.OK, MessageBoxImage.Error, MessageBoxResult.OK);
+            }
+
+        }
+                
     }
 }

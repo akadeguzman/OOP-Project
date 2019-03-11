@@ -60,6 +60,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddPayment.xaml.cs">
+      <DependentUpon>AddPayment.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Settings.xaml.cs">
       <DependentUpon>Settings.xaml</DependentUpon>
     </Compile>
@@ -67,7 +70,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="AddJewelry.xaml">
+    <Page Include="AddPayment.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -82,9 +85,6 @@
     <Compile Include="AddCustomer.xaml.cs">
       <DependentUpon>AddCustomer.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AddJewelry.xaml.cs">
-      <DependentUpon>AddJewelry.xaml</DependentUpon>
-    </Compile>
     <Compile Include="AddTransaction.xaml.cs">
       <DependentUpon>AddTransaction.xaml</DependentUpon>
     </Compile>
@@ -92,7 +92,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Classes\Calculations.cs" />
     <Compile Include="Classes\Person.cs" />
     <Compile Include="Classes\Product.cs" />
     <Compile Include="MainWindow.xaml.cs">
@@ -130,12 +129,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="TextFiles\Customers.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="TextFiles\CustomerName.txt" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Logo For Project copy.png" />

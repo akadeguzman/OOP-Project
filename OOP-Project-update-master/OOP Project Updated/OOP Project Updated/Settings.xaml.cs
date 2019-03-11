@@ -18,10 +18,9 @@ namespace OOP_Project_Updated
 {
     public partial class Settings : Window
     {
-        public Product Quality10k = new Product();
-        public Product Quality18k = new Product();
-        public Product Quality21k = new Product();
+        public DataStorage data;
         
+               
         public Settings()
         {
             InitializeComponent();
@@ -29,13 +28,20 @@ namespace OOP_Project_Updated
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            this.Hide();
             MainWindow main = new MainWindow();
-            
-            Quality10k.GetPrice = Convert.ToDecimal(Necklace10k.Text);
-            Quality18k.GetPrice = Convert.ToDecimal(Necklace18k.Text);
-            Quality21k.GetPrice = Convert.ToDecimal(Necklace21k.Text);
+            {
+                main.data = data;
+            }
 
+            decimal[] Qualities = new decimal[3];
+
+            Qualities[0] = Convert.ToDecimal(Quality10k.Text);
+            Qualities[1] = Convert.ToDecimal(Quality18k.Text);
+            Qualities[2] = Convert.ToDecimal(Quality21k.Text);
+
+            foreach (decimal quali in Qualities)
+                data.qualities.Add(quali);
 
             main.Show();
         }

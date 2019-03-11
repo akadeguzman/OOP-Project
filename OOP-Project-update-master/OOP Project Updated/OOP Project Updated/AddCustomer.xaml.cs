@@ -21,10 +21,7 @@ namespace OOP_Project_Updated
     /// </summary>
     public partial class AddCustomer : Window
     {
-        
-        public MainWindow main = new MainWindow();
-        public DataStorage data = new DataStorage();
-        public string MobileNumber = "+63";
+        public DataStorage data;
 
         public AddCustomer()
         {
@@ -37,35 +34,48 @@ namespace OOP_Project_Updated
 
             //string filePath = @"C:\Users\Adrian\Documents\GitHub\OOP-Project\OOP-Project-update-master\OOP Project Updated\OOP Project Updated\TextFiles\Customers.txt";
             //string CustName = @"C:\Users\Adrian\Documents\GitHub\OOP-Project\OOP-Project-update-master\OOP Project Updated\OOP Project Updated\TextFiles\CustomerName.txt";
-                       
-            AddTransaction Add = new AddTransaction();
-                            
-            Person Customer = new Person(this.txtFirstName.Text, this.txtMiddleInitial.Text, this.txtLastName.Text, this.txtAddress.Text, MobileNumber);
-                     
+                                        
+            Person customer = new Person(txtFirstName.Text, txtMiddleInitial.Text, txtLastName.Text, txtAddress.Text, txtContactNumber.Text);
 
-            if (txtContactNumber.Text.Length == 10)
+            bool exist = false;
+
+            
+            foreach (Person person in data.customers)
             {
-                MobileNumber += txtContactNumber.Text;
+                if (customer.GetFullName() == person.GetFullName() || customer == null)
+                {
+                    exist = true;
+                }
+                else
+                    exist = false;
+            }
 
-                data.customers.Add(Customer);
-
-                SnackbarThree.MessageQueue.Enqueue("Customer Added Successfully");
-
+            if (exist == false)
+            {
+                
+                if (txtContactNumber.Text.Length == 10)
+                {
+                    data.customers.Add(customer);
+                    SnackbarThree.MessageQueue.Enqueue("Customer Added Successfully");
+                }
+                else
+                {
+                    MessageBox.Show("Incorrect Mobile Number. Please Try Again", "Incorrect Details", MessageBoxButton.OK, MessageBoxImage.Error, MessageBoxResult.OK);
+                    data.customers.Clear();
+                }
+                
             }
             else
             {
-                MessageBox.Show("Incorrect Mobile Number. Please Try Again", "Incorrect Details", MessageBoxButton.OK, MessageBoxImage.Error, MessageBoxResult.OK);
-                
+                MessageBox.Show("The name already exist. Please Try Again", "Incorrect Details", MessageBoxButton.OK, MessageBoxImage.Error, MessageBoxResult.OK);
+                data.customers.Clear();
             }
-
+                       
         }
 
         private void Next_Click(object sender, RoutedEventArgs e)
         {
-            AddTransaction Add = new AddTransaction();
-            this.Hide();
-            Add.Show();
-
+            this.Close();
         }
 
 

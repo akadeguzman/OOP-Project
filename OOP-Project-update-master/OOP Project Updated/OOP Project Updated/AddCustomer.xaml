@@ -10,15 +10,50 @@
     <Grid>
         <Rectangle RadiusY="8" RadiusX="8" Fill="White"/>
 
-        <Label Content="First Name" HorizontalAlignment="Left" Margin="72,80,0,0" VerticalAlignment="Top" Height="39" Width="90"/>
-        <Label Content="Middle Initial" HorizontalAlignment="Left" Margin="56,134,0,0" VerticalAlignment="Top" Height="38" Width="106"/>
-        <Label Content="Last Name" HorizontalAlignment="Left" Margin="74,187,0,0" VerticalAlignment="Top" Height="40" Width="88"/>
-
         <!--Text Box-->
-        <TextBox x:Name="txtFirstName" HorizontalAlignment="Left" Height="35" Margin="192,80,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="168"/>
-        <TextBox x:Name="txtMiddleInitial" HorizontalAlignment="Left" Height="34" Margin="192,134,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="168"/>
-        <TextBox x:Name="txtLastName" HorizontalAlignment="Left" Height="35" Margin="192,192,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="168"/>
-
+        <TextBox x:Name="txtFirstName" 
+                 HorizontalAlignment="Left" 
+                 Height="35" Margin="100,76,0,0" 
+                 TextWrapping="Wrap"  
+                 VerticalAlignment="Top" Width="240" 
+                 materialDesign:HintAssist.Hint="First Name"
+                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                 />
+        <TextBox x:Name="txtMiddleInitial" 
+                 HorizontalAlignment="Left" 
+                 Height="34" Margin="100,116,0,0" 
+                 TextWrapping="Wrap"  
+                 VerticalAlignment="Top" 
+                 Width="240"
+                 materialDesign:HintAssist.Hint="Middle Initial"
+                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+        <TextBox x:Name="txtLastName" 
+                 HorizontalAlignment="Left" 
+                 Height="35" 
+                 Margin="100,155,0,0" 
+                 TextWrapping="Wrap"  
+                 VerticalAlignment="Top" 
+                 Width="240"
+                 materialDesign:HintAssist.Hint="Last Name"
+                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+        <TextBox x:Name="txtContactNumber" 
+                 HorizontalAlignment="Left" 
+                 Height="34" 
+                 Margin="122,226,0,0" 
+                 TextWrapping="Wrap" 
+                 VerticalAlignment="Top" 
+                 Width="218"
+                 materialDesign:HintAssist.Hint="Contact Number"
+                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+        <TextBox x:Name="txtAddress" 
+                 HorizontalAlignment="Left" 
+                 Height="36" 
+                 Margin="100,284,0,0" 
+                 TextWrapping="Wrap" 
+                 VerticalAlignment="Top" 
+                 Width="240"
+                 materialDesign:HintAssist.Hint="Address"
+                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
         <!--Image-->
 
         <Image Source="Images\Logo For Project copy.png" Margin="410,0,0,0" HorizontalAlignment="Center" Stretch="UniformToFill"/>
@@ -35,25 +70,27 @@
         <StackPanel Margin="420,80,0,50">
             <TextBlock Text="Only provide information that is true and correct" Foreground="White" HorizontalAlignment="Center" FontSize="40" FontFamily="Champagne &amp; Limousines" FontWeight="Bold" TextAlignment="Center" TextWrapping="Wrap" Margin="9,0,8,0"/>
             <TextBlock Text="Loan Upon A Store" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" Width="280" FontSize="24" FontFamily="Champagne &amp; Limousines" TextWrapping="Wrap" TextAlignment="Center" Margin="0,50,0,0"/>
-            <TextBlock Text="Loan Now, Pay Later.For your total Money Needs" FontWeight="UltraLight" Foreground="White" FontSize="22" FontFamily="Champagne &amp; Limousines" TextWrapping="Wrap" TextAlignment="Center" Margin="1"/>
+            <TextBlock Text="Loan Now, Pay Later. For your total Money Needs" FontWeight="UltraLight" Foreground="White" FontSize="22" FontFamily="Champagne &amp; Limousines" TextWrapping="Wrap" TextAlignment="Center" Margin="1"/>
         </StackPanel>
 
         <!--Image-->
 
+        <!--button-->
 
-        <Label Content="Choose Transaction" FontFamily="Segoe UI Black" FontSize="24" Margin="22,33,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-        <Button x:Name="btnNext" Content="Next" HorizontalAlignment="Left" Margin="164,358,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click" Height="32"/>
-        <Label Content="Contact No." HorizontalAlignment="Left" Margin="64,248,0,0" VerticalAlignment="Top" Height="40" Width="98"/>
-        <TextBox x:Name="txtContactNumber" HorizontalAlignment="Left" Height="35" Margin="226,255,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134"/>
-        <Label Content="Address" HorizontalAlignment="Left" Margin="96,307,0,0" VerticalAlignment="Top" Height="39" Width="70"/>
-        <TextBox x:Name="txtAddress" HorizontalAlignment="Left" Height="35" Margin="200,311,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160"/>
-        <Button x:Name="Next" Content="Save" HorizontalAlignment="Left" Margin="164,395,0,0" VerticalAlignment="Top" Width="76" Height="32" Click="Next_Click"/>
+        <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="164,358,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click" Height="32"/>
+        <Button x:Name="btnNext" Content="Next" HorizontalAlignment="Left" Margin="164,395,0,0" VerticalAlignment="Top" Width="76" Height="32" Click="Next_Click"/>
 
         <!--popup-->
         <materialDesign:Snackbar
         MessageQueue="{materialDesign:MessageQueue}"
         x:Name="SnackbarThree" />
-        <Label Content="+63" HorizontalAlignment="Left" Margin="184,255,0,0" VerticalAlignment="Top" Height="39" Width="42"/>
+        <Label Content="+63" HorizontalAlignment="Left" Margin="92,236,0,0" VerticalAlignment="Top" Height="28" Width="42"/>
+
+        <!--others-->
+        <materialDesign:PackIcon Kind="House" Height="34" Width="44" Margin="42,288,0,0"/>
+        <materialDesign:PackIcon Kind="MobilePhoneBasic" Height="34" Width="44" Margin="42,230,0,0"/>
+        <materialDesign:PackIcon Kind="Account" Margin="42,80,0,0" Height="34" Width="44" />
+        <Label Content="Customer Information" FontFamily="Segoe UI Black" FontSize="20" Margin="24,19,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
 
     </Grid>
 </Window>

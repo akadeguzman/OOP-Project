@@ -1,0 +1,40 @@
+﻿<Window x:Class="OOP_Project_Updated.AddPayment"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OOP_Project_Updated"
+        mc:Ignorable="d"
+        Title="AddPayment" Height="450" Width="800" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" Background="Transparent" WindowStartupLocation="CenterScreen">
+
+    <Grid>
+        <Rectangle RadiusY="8" RadiusX="8" Fill="White"/>
+        <Image Source="Images\Logo For Project copy.png" Margin="410,0,0,0" HorizontalAlignment="Center" Stretch="UniformToFill" Width="650"/>
+        <Rectangle Margin="410,0,0,0">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#CC128D93" Offset="1"/>
+                    <GradientStop Color="#CC4682EA"/>
+                    <GradientStop Color="#CC289EB8" Offset="0.566"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <StackPanel Margin="430,70,10,20">
+            <TextBlock Text="Only provide information that is true and correct" Foreground="White" HorizontalAlignment="Center" FontSize="40" FontFamily="Champagne &amp; Limousines" FontWeight="Bold" TextAlignment="Center" TextWrapping="Wrap" Margin="9,0,8,0"/>
+            <TextBlock Text="Loan Upon A Store" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" Width="280" FontSize="24" FontFamily="Champagne &amp; Limousines" TextWrapping="Wrap" TextAlignment="Center" Margin="0,50,0,0"/>
+            <TextBlock Text="Loan Now, Pay Later.For your total Money Needs" FontWeight="UltraLight" Foreground="White" FontSize="22" FontFamily="Champagne &amp; Limousines" TextWrapping="Wrap" TextAlignment="Center" Margin="1"/>
+        </StackPanel>
+
+        <!---->
+        <StackPanel Margin="20,10,290,10">
+            <Label Content="Payment Transaction" FontFamily="Segoe UI Black" FontSize="20" Margin="0,5,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <StackPanel Orientation="Horizontal" Margin="10,10,0,0">
+                <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap" Foreground="#707070"><Run Text="Good day ma'am/sir"/></TextBlock>
+
+            </StackPanel>
+            <TextBlock Margin="10,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap" Foreground="#707070"><Run Text="Please ensure that the information is true and correct for validation"/></TextBlock>
+        </StackPanel>
+        <!---->
+    </Grid>
+</Window>

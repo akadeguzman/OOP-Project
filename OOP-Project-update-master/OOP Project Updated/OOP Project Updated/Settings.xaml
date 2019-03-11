@@ -11,7 +11,7 @@
     <Grid>
         <Rectangle RadiusY="8" RadiusX="8" Fill="White"/>
         <Image Source="Images\Logo For Project copy.png" Margin="316,0,0,0" HorizontalAlignment="Center" Stretch="UniformToFill"/>
-        <Rectangle Margin="310,0,0,0">
+        <Rectangle Margin="315,0,0,0">
             <Rectangle.Fill>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#CC128D93" Offset="1"/>
@@ -24,19 +24,19 @@
         <StackPanel Margin="60,118,350,100">
             <Label Content="Price Per Gram" FontFamily="Segoe UI Black" FontSize="12" Margin="52,10,40,10" VerticalAlignment="Top" HorizontalAlignment="Center" Width="98"/>
             <TextBox
-                x:Name="Necklace10k"
+                x:Name="Quality10k"
                 Margin="5,-10,5,10"
                 materialDesign:HintAssist.Hint="10k"
                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
 
             <TextBox
-                x:Name="Necklace18k"
+                x:Name="Quality18k"
                 Margin="5,-10,5,10"
                 materialDesign:HintAssist.Hint="18k"
                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
 
             <TextBox
-                x:Name="Necklace21k"
+                x:Name="Quality21k"
                 Margin="5,-10,5,10"
                 materialDesign:HintAssist.Hint="21k"
                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
@@ -59,13 +59,13 @@
             </Grid>
 
             <Grid>
-                <Button HorizontalAlignment="Center" Content="SAVE" FontFamily="Impact" FontSize="18" Width="100" Background="#FF307CD6" BorderBrush="#FF307CD6" Click="Button_Click_1" Margin="89,93,101,-93" />
+                <Button HorizontalAlignment="Center" Content="SAVE" FontFamily="Impact" FontSize="18" Width="100" Background="#FF307CD6" BorderBrush="#FF307CD6" Click="Button_Click_1" Margin="89,82,101,-82" />
             </Grid>
 
             <Grid Margin="10,20"/>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,60" Height="48" Width="290" >
-                <TextBlock Text="Please ensure that you keep and remember your unique 8-digit number for Loan Transaction" TextWrapping="Wrap" TextAlignment="Center" Foreground="#707070" VerticalAlignment="Center" HorizontalAlignment="Center" Width="283" Height="48" RenderTransformOrigin="0.64,0.438"/>
+                <TextBlock Text="Please ensure to fill all textboxes. Textboxes are all required" TextWrapping="Wrap" TextAlignment="Center" Foreground="#707070" VerticalAlignment="Center" HorizontalAlignment="Center" Width="272" Height="48" RenderTransformOrigin="0.64,0.438"/>
 
             </StackPanel>
         </StackPanel>

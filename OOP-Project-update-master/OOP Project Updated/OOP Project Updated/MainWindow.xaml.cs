@@ -16,13 +16,9 @@ using OOP_Project;
 
 namespace OOP_Project_Updated
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
-        
-        public Product Jewelry = new Product();
+        public DataStorage data = new DataStorage();
 
         public MainWindow()
         {
@@ -34,6 +30,9 @@ namespace OOP_Project_Updated
             this.Hide();
 
             AddTransaction AddTransac = new AddTransaction();
+            {
+                AddTransac.data = data;
+            }
 
             AddTransac.Show();
 
@@ -43,15 +42,18 @@ namespace OOP_Project_Updated
         {
             this.Hide();
 
-            AddJewelry jewelry = new AddJewelry();
+            AddPayment payment = new AddPayment();
 
-            jewelry.Show();
+            payment.Show();
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             this.Hide();
             Settings settings = new Settings();
+            {
+                settings.data = data;
+            }
             settings.Show();
         }
     }
@@ -59,7 +61,8 @@ namespace OOP_Project_Updated
     public class DataStorage
     {
         public List<Person> customers = new List<Person>();
-        public List<Product> products = new List<Product>();
+        public List<string> transactionDetails = new List<string>();
+        public List<decimal> qualities = new List<decimal>();
     }
     
    
