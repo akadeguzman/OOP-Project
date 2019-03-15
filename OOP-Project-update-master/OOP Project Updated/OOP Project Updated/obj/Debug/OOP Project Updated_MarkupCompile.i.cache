@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Adrian\Documents\GitHub\OOP-Project\OOP-Project-update-master\OOP Project Updated\OOP Project Updated\App.xaml
-5-825387585
+7-488823367
 
-15585956410
+17706806736
 15472003924
-AddCustomer.xaml;AddPayment.xaml;AddTransaction.xaml;MainWindow.xaml;Settings.xaml;
+AddCustomer.xaml;AddPayment.xaml;AddTransaction.xaml;MainWindow.xaml;PaymentTransaction.xaml;Receipt.xaml;Settings.xaml;
 
-False
+True
 

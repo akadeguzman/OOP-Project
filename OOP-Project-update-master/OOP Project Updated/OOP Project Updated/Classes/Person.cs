@@ -47,8 +47,11 @@ namespace OOP_Project
 
         public string GetFullName()
         {
-            
             LastName = GetTitleCase(LastName);
+            if (MiddleInitial.Length >= 1)
+            {
+                MiddleInitial = MiddleInitial[0].ToString();
+            }
             FirstName = GetTitleCase(FirstName);
 
             return string.Format("{0} {1}. {2}", FirstName,
@@ -70,7 +73,6 @@ namespace OOP_Project
                 }
                 else
                     MobileNumber = " ";
-
 
             }
         }

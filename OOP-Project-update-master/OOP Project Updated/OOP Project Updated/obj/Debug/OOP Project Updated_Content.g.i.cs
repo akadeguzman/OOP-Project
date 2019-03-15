@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("textfiles/prices.txt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("addcustomer.xaml")]
 
 

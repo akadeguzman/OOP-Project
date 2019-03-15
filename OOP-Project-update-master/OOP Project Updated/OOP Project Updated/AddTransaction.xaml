@@ -6,14 +6,14 @@
         xmlns:local="clr-namespace:OOP_Project_Updated"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="AddTransaction" Height="450" Width="800" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" Background="Transparent" WindowStartupLocation="CenterScreen" Activated="Window_Activated">
+        Title="AddTransaction" Height="450" Width="800" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" WindowStartupLocation="CenterScreen" Activated="Window_Activated">
 
     <Grid>
         <Rectangle RadiusY="8" RadiusX="8" Fill="White"/>
-        <Rectangle Fill="#FF673AB7" Margin="222,309,423,26"/>
+        <Rectangle Fill="#FF673AB7" RadiusY="8" RadiusX="8" Margin="222,303,423,40"/>
 
         <Button Click="Button_Click_1" Style="{StaticResource MaterialDesignFloatingActionMiniDarkButton}"
-                ToolTip="MaterialDesignFloatingActionMiniDarkButton" Margin="352,58,410,353" Height="Auto" Width="Auto" RenderTransformOrigin="0.51,0.516">
+                ToolTip="MaterialDesignFloatingActionMiniDarkButton" Margin="342,78,424,337" Height="Auto" Width="Auto" RenderTransformOrigin="0.51,0.516">
             <materialDesign:PackIcon
                 Kind="PersonAddOutline"
                 Height="24"
@@ -22,19 +22,18 @@
 
 
         <!--Button-->
-        <Button  Content="Add Transaction" Click="Button_Click" HorizontalAlignment="Left" Margin="40,373,0,0" VerticalAlignment="Top" Width="145" Height="44"/>
-        <Button  Content="Compute" Click="Button_Click_2" HorizontalAlignment="Left" Margin="256,367,0,0" VerticalAlignment="Top" Width="90" Height="33" Background="#FFD3D339" BorderBrush="{x:Null}" Foreground="#DD000000"/>
-
+        <Button  Content="Add Transaction" Click="Button_Click" HorizontalAlignment="Left" Margin="46,379,0,0" VerticalAlignment="Top" Width="138" Height="31"/>
+        <Button  Content="Compute" FontSize="15" FontWeight="Bold" Click="Button_Click_2" HorizontalAlignment="Left" Margin="240,361,0,0" VerticalAlignment="Top" Width="124" Height="36" Background="#FFD3D339" BorderBrush="{x:Null}" Foreground="#DD000000"/>
         <!--Boxes-->
 
-        <ComboBox materialDesign:HintAssist.Hint="Customer" Name="cmbCustomer" Margin="40,69,465,353" FontSize="14"/>
+        <ComboBox materialDesign:HintAssist.Hint="Customer" Name="cmbCustomer" Margin="40,81,465,341" FontSize="12"/>
 
-        <ComboBox materialDesign:HintAssist.Hint="Jewelry" Name="cmbJewelry" HorizontalAlignment="Left" Margin="40,102,0,0" VerticalAlignment="Top" Width="295" SelectionChanged="CmbJewelry_SelectionChanged" Height="29" FontSize="14"/>
+        <ComboBox materialDesign:HintAssist.Hint="Jewelry" Name="cmbJewelry" HorizontalAlignment="Left" Margin="40,114,0,0" VerticalAlignment="Top" Width="295" SelectionChanged="CmbJewelry_SelectionChanged" Height="29" FontSize="12"/>
 
 
-        <ComboBox materialDesign:HintAssist.Hint="Quality" x:Name="cmbQuality" HorizontalAlignment="Left" Margin="40,136,0,0" VerticalAlignment="Top" Width="295" Height="31" SelectionChanged="CmbQuality_SelectionChanged" FontSize="14"/>
+        <ComboBox materialDesign:HintAssist.Hint="Quality" x:Name="cmbQuality" HorizontalAlignment="Left" Margin="40,148,0,0" VerticalAlignment="Top" Width="295" Height="31" SelectionChanged="CmbQuality_SelectionChanged" FontSize="12"/>
 
-        <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}" Name="txtWeight"  Margin="228,184,482,227">
+        <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}" Name="txtWeight"  Margin="228,199,482,212">
             <materialDesign:HintAssist.Hint>
                 <StackPanel
                      Orientation="Horizontal" Height="18">
@@ -50,27 +49,31 @@
         <TextBox
             x:Name="txtCondition"
             Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}"
-            Margin="40,191,598,0"
+            Margin="40,206,598,0"
             VerticalAlignment="Top"
             Height="73"
             TextWrapping="Wrap"
             VerticalScrollBarVisibility="Auto"
             materialDesign:HintAssist.Hint="Condition"/>
 
-        <TextBox x:Name="txtAmountLoaned" materialDesign:HintAssist.Hint="Amount to Loan" HorizontalAlignment="Left" Height="24" Margin="66,284,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="118" FontSize="14"/>
+        <TextBox x:Name="txtAmountLoaned" materialDesign:HintAssist.Hint="Amount to Loan" HorizontalAlignment="Left" Height="24" Margin="66,304,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="118" FontSize="12"/>
 
-        <TextBox x:Name="txtPrice" materialDesign:HintAssist.Hint="TOTAL PRICE" Style="{StaticResource MaterialDesignFloatingHintTextBox}" HorizontalAlignment="Left" Height="41" Margin="264,309,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="86" FontSize="13" FontStyle="Italic" FontWeight="Bold" Foreground="Azure"/>
+        <TextBlock x:Name="txtPrice"  HorizontalAlignment="Left" Height="24" Margin="261,330,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" FontSize="15" FontStyle="Italic" FontWeight="Bold" Foreground="Azure"/>
 
-        <DatePicker x:Name="txtDate" materialDesign:HintAssist.Hint="Date Today" HorizontalAlignment="Left" Margin="66,323,0,0" VerticalAlignment="Top" Width="92" Height="27" FontSize="14"/>
+        <DatePicker x:Name="txtDate" materialDesign:HintAssist.Hint="Date Today" HorizontalAlignment="Left" Margin="66,333,0,0" VerticalAlignment="Top" Width="92" Height="27" FontSize="12"/>
 
-        <!--Labels-->
 
-        <materialDesign:PackIcon Kind="PhilippinePeso" Margin="232,320,0,0" Height="30" Width="23" Foreground="Azure"/>
-        <materialDesign:PackIcon Kind="PhilippinePeso" Margin="40,283,0,0" Height="26" Width="22" />
-        <!---->
-        
-        <Label Content="Add Transaction" FontFamily="Segoe UI Black" FontSize="20" Margin="27,14,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-                  
+        <!--Icons-->
+
+        <materialDesign:PackIcon Kind="PhilippinePeso" Margin="240,329,0,0" Height="28" Width="17" Foreground="Azure"/>
+        <materialDesign:PackIcon Kind="Calendar" Foreground="DimGray" Margin="45,340,0,0" Height="20" Width="17" />
+        <materialDesign:PackIcon Kind="PhilippinePeso" Foreground="DimGray" Margin="46,309,0,0" Height="18" Width="16" />
+        <!--Label-->
+
+        <Label Content="Add Transaction" FontFamily="Segoe UI Black" FontSize="20" Margin="36,14,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap" Foreground="#707070" Margin="32,50,0,0"><Run Text="After filling all the information, TAP on the compute button"/></TextBlock>
+        <Label Content="Total Price" FontSize="10" FontWeight="Bold" Foreground="WhiteSmoke" HorizontalAlignment="Left" Margin="236,306,0,0" VerticalAlignment="Top"/>
+
         <!---->
 
 
@@ -99,7 +102,7 @@
         MessageQueue="{materialDesign:MessageQueue}"
         x:Name="SnackbarThree" />
 
-        <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}" x:Name="txtdeductedWeight"  Margin="228,228,436,183">
+        <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}" x:Name="txtdeductedWeight"  Margin="228,243,436,168">
             <materialDesign:HintAssist.Hint>
                 <StackPanel
                     Orientation="Horizontal" Height="18">
@@ -109,6 +112,15 @@
                 </StackPanel>
             </materialDesign:HintAssist.Hint>
         </TextBox>
+        <Button
+              Style="{StaticResource MaterialDesignFloatingActionMiniButton}"
+              HorizontalAlignment="Left"
+              ToolTip="MaterialDesignFloatingActionMiniButton" Margin="750,10,0,400" Background="IndianRed" Click="Button_Click_3">
+            <materialDesign:PackIcon
+                Kind="KeyboardBackspace"
+                Height="24"
+                Width="24" />
+        </Button>
 
 
     </Grid>

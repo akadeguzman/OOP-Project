@@ -14,11 +14,13 @@ namespace OOP_Project
         private decimal Weight;
         private string Quality;
         private int Items;
+        public int Counter;
 
         public string GetName { get; set; }       
         public decimal GetWeight { get; set; }
         public decimal GetPrice { get; set; }
         public string GetQuality { get; set; }
+        public int GetCounter { get; set; }
                        
     }
 

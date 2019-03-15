@@ -42,13 +42,20 @@ namespace OOP_Project_Updated
             
             foreach (Person person in data.customers)
             {
-                if (customer.GetFullName() == person.GetFullName() || customer == null)
+                if (customer.GetFullName() == person.GetFullName())
                 {
                     exist = true;
                 }
                 else
                     exist = false;
             }
+
+            if (txtFirstName.Text == "" && txtLastName.Text == "" && txtMiddleInitial.Text == "")
+            {
+                exist = true;
+            }
+            else
+                exist = false;
 
             if (exist == false)
             {
@@ -61,14 +68,16 @@ namespace OOP_Project_Updated
                 else
                 {
                     MessageBox.Show("Incorrect Mobile Number. Please Try Again", "Incorrect Details", MessageBoxButton.OK, MessageBoxImage.Error, MessageBoxResult.OK);
-                    data.customers.Clear();
+                    txtContactNumber.Clear();
                 }
                 
             }
             else
             {
-                MessageBox.Show("The name already exist. Please Try Again", "Incorrect Details", MessageBoxButton.OK, MessageBoxImage.Error, MessageBoxResult.OK);
-                data.customers.Clear();
+                MessageBox.Show("The name already exist or name space is blank. Please Try Again", "Incorrect Details", MessageBoxButton.OK, MessageBoxImage.Error, MessageBoxResult.OK);
+                txtFirstName.Clear();
+                txtLastName.Clear();
+                txtMiddleInitial.Clear();
             }
                        
         }
@@ -76,6 +85,19 @@ namespace OOP_Project_Updated
         private void Next_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void TxtMiddleInitial_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            
+            if (txtMiddleInitial.Text.Length > 1)
+                
+            if (MessageBox.Show("Incorrect Middle Initial. Must only contain INITIAL", "Check input", MessageBoxButton.OK) == MessageBoxResult.OK)
+                {
+                    txtMiddleInitial.Clear();
+                }
+
+                      
         }
 
 

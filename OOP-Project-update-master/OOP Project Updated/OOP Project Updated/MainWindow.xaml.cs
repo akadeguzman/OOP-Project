@@ -34,8 +34,15 @@ namespace OOP_Project_Updated
                 AddTransac.data = data;
             }
 
-            AddTransac.Show();
-
+            if (data.qualities.Count != 0)
+            {
+                AddTransac.Show();
+            }
+            else
+            {
+                MessageBox.Show("Please update the settings for price per gram", "Tap the SETTINGS");
+                this.Show();
+            }
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -43,6 +50,9 @@ namespace OOP_Project_Updated
             this.Hide();
 
             AddPayment payment = new AddPayment();
+            {
+                payment.data = data;
+            }
 
             payment.Show();
         }
@@ -54,6 +64,7 @@ namespace OOP_Project_Updated
             {
                 settings.data = data;
             }
+
             settings.Show();
         }
     }
@@ -61,8 +72,9 @@ namespace OOP_Project_Updated
     public class DataStorage
     {
         public List<Person> customers = new List<Person>();
-        public List<string> transactionDetails = new List<string>();
+        public List<List<string>> finalDetails = new List<List<string>>();
         public List<decimal> qualities = new List<decimal>();
+        public List<int> counter = new List<int>();
     }
     
    
